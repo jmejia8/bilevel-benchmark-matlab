@@ -32,10 +32,12 @@ void mexFunction( int nlhs, mxArray *plhs[],
     }
     
     int D_ul = mxGetN(prhs[0]);
-    int D_ll = mxGetN(prhs[1]);
-    
-    double *x = mxGetPr(prhs[0]);
-    double *y = mxGetPr(prhs[1]);
+    // int D_ll = mxGetN(prhs[1]);
+    int m = D_ul/2, n = D_ul;
+
+    double *x = (double *) mxGetPr(prhs[0]);
+    double *y = (double *) mxGetPr(prhs[1]);
+
 
     size_t fnum = mxGetScalar(prhs[2]);
 
@@ -47,5 +49,5 @@ void mexFunction( int nlhs, mxArray *plhs[],
     double *G = mxGetPr(plhs[1]);
 
     /* call the computational routine */
-    PMM_leader(D_ul, D_ll, x, y, F, G, (int) fnum);
+    PMM_leader(m, n, x, y, F, G, (int) fnum);
 }
