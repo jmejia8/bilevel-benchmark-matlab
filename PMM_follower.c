@@ -1,3 +1,4 @@
+// mex('CFLAGS="\$CFLAGS -std=c99 -lm"', 'PMM_follower.c')
 #include "mex.h"
 #include "bilevel-benchmark/pmm.c"
 
