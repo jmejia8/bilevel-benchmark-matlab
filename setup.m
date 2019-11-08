@@ -1,7 +1,7 @@
 close all;
 clear all;
 
-v = '9.1.3';
+v = '9.1.4';
 url = strcat('https://github.com/jmejia8/bilevel-benchmark/archive/v', v ,'.zip');
 libpath = strcat('bilevel-benchmark-', v ,'/*');
 
